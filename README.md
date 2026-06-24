@@ -63,6 +63,51 @@ While building, you may want to turn this off so signup is instant:
 
 ---
 
+## 🌍 Put your site online with Vercel (free)
+
+Vercel is made by the same team as Next.js and hosts Pawpals for free. Your
+code is already on GitHub, so this takes about 5 minutes.
+
+### Step 1 — Connect GitHub to Vercel
+1. Go to <https://vercel.com> and click **Sign Up** → **Continue with GitHub**.
+2. Approve the access so Vercel can see your repositories.
+
+### Step 2 — Import the project
+1. On your Vercel dashboard, click **Add New… → Project**.
+2. Find **`pawpals`** in the list and click **Import**.
+3. Vercel auto-detects Next.js — leave the build settings as they are.
+
+### Step 3 — Add your Supabase keys
+This is the most important step. Without it, the live site stays in preview mode.
+
+1. On the import screen, open the **Environment Variables** section.
+2. Add these two (the same values from your `.env.local`):
+
+   | Name | Value |
+   |------|-------|
+   | `NEXT_PUBLIC_SUPABASE_URL` | your Supabase Project URL |
+   | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | your Supabase anon public key |
+
+### Step 4 — Deploy
+1. Click **Deploy** and wait ~1–2 minutes.
+2. Vercel gives you a live link like `https://pawpals.vercel.app`. That's your site! 🎉
+
+### Step 5 — Tell Supabase about your live address
+So login/signup works on the live site (not just locally):
+
+1. Supabase → **Authentication** → **URL Configuration**.
+2. Set **Site URL** to your Vercel link (e.g. `https://pawpals.vercel.app`).
+3. Add the same link under **Redirect URLs**.
+
+### After that: automatic updates 🔁
+Every time you `git push` to GitHub, Vercel rebuilds and updates your live site
+automatically. No extra steps.
+
+> 💡 If you change environment variables in Vercel later, you must **redeploy**
+> for them to take effect (Vercel → your project → **Deployments** → **Redeploy**).
+
+---
+
 ## 🗂️ Where things live
 
 ```
