@@ -16,6 +16,9 @@ services. The foundation is built and tested — your job is to build the servic
 - [x] Mobile-responsive layout, navbar & footer
 - [x] Supabase connection helpers (browser + server)
 - [x] Verified production build passes
+- [x] Preview mode — app runs even without Supabase keys (no connection errors)
+- [x] Code pushed to GitHub (github.com/btsog/pawpals)
+- [x] Vercel deployment guide added to the README
 
 **Database** (run `supabase/schema.sql` in Supabase)
 - [x] 7 tables created with relationships
@@ -39,6 +42,18 @@ services. The foundation is built and tested — your job is to build the servic
 - [ ] Turn OFF "Confirm email" in Supabase while building
 - [ ] Run `npm install` then `npm run dev`
 - [ ] Open http://localhost:3000
+
+---
+
+## 🌍 Go Live (when you're ready — see README for full steps)
+
+- [ ] Sign up at vercel.com with your GitHub account
+- [ ] Import the `pawpals` repo into Vercel
+- [ ] Add the two Supabase env vars in Vercel (URL + anon key)
+- [ ] Deploy and get your live link (e.g. `pawpals.vercel.app`)
+- [ ] Set the Site URL + Redirect URL in Supabase (Authentication → URL Configuration)
+
+> After this, every `git push` auto-updates your live site.
 
 ---
 
